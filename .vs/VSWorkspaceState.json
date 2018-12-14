@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\sln",
-    "\\src",
+    "\\include",
+    "\\sln\\vc10",
     "\\test"
   ],
-  "SelectedNode": "\\src\\tset.cpp",
+  "SelectedNode": "\\include\\tbitfield.h",
   "PreviewInSolutionExplorer": false
 }
