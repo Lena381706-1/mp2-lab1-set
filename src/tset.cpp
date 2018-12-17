@@ -6,9 +6,13 @@
 // Множество - реализация через битовые поля
 
 #include "tset.h"
+/*
+int MaxPower;       // максимальная мощность множества
+TBitField BitField;  //битовое поле 
+*/
 
 TSet::TSet(int mp) : BitField(mp)
-{
+{	if (mp >= 0)
 	MaxPower = mp;
 }
 
@@ -16,17 +20,20 @@ TSet::TSet(int mp) : BitField(mp)
 TSet::TSet(const TSet &s) : BitField(s.BitField)
 {
 		MaxPower = s.MaxPower;
+		BitField = s.BitField;
 }
 
 // конструктор преобразования типа
 TSet::TSet(const TBitField &bf) : BitField(bf)
 {
 	MaxPower = bf.GetLength();
+	BitField = bf;
 }
 
 TSet::operator TBitField()
-{
-	return BitField;
+{	
+	TBitField tmp = (TBitField)*this;
+	return tmp;
 }
 
 int TSet::GetMaxPower(void) const // получить макс. к-во эл-тов
@@ -37,21 +44,21 @@ int TSet::GetMaxPower(void) const // получить макс. к-во эл-т�
 int TSet::IsMember(const int Elem) const // элемент множества?
 {
 	if (Elem < 0 || Elem >= MaxPower)
-		throw "Wrong element";
+		throw "Uncorrect element";
 	return BitField.GetBit(Elem);
 }
 
 void TSet::InsElem(const int Elem) // включение элемента множества
 {
 	if (Elem < 0 || Elem >= MaxPower)
-		throw "Wrong element";
+		throw "Uncorrect element";
 	BitField.SetBit(Elem);
 }
 
 void TSet::DelElem(const int Elem) // исключение элемента множества
 {
 	if (Elem < 0 || Elem >= MaxPower)
-		throw "Wrong element";
+		throw "Uncorrect element";
 	BitField.ClrBit(Elem);
 }
 
@@ -69,12 +76,17 @@ TSet& TSet::operator=(const TSet &s) // присваивание
 
 int TSet::operator==(const TSet &s) const // сравнение
 {
-	return (BitField == s.BitField);
+	if (BitField == s.BitField)
+		return 1;
 }
 
 int TSet::operator!=(const TSet &s) const // сравнение
 {
-	return (BitField != s.BitField);
+	int flag = 0;
+	if (BitField != s.BitField)
+		return flag=1;
+	if (MaxPower != s.MaxPower)
+		return flag=1;
 }
 
 TSet TSet::operator+(const TSet &s) // объединение
@@ -90,7 +102,7 @@ TSet TSet::operator+(const TSet &s) // объединение
 TSet TSet::operator+(const int Elem) // объединение с элементом
 {
 	if (Elem < 0 || Elem >= MaxPower)
-		throw "Wrong element";
+		throw "Uncorrect element";
 	TSet tmp(*this);
 	tmp.InsElem(Elem);
 	return tmp;
@@ -99,7 +111,7 @@ TSet TSet::operator+(const int Elem) // объединение с элемент
 TSet TSet::operator-(const int Elem) // разность с элементом
 {
 	if (Elem < 0 || Elem >= MaxPower)
-		throw "Wrong element";
+		throw "Uncorrect element";
 	TSet tmp(*this);
 	tmp.DelElem(Elem);
 	return tmp;
