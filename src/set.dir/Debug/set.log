@@ -1,0 +1,5 @@
+﻿  tset.cpp
+c:\users\golel\desktop\лаба множества\mp2-lab1-set\src\tset.cpp(37): warning C4717: TSet::operator TBitField: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+c:\users\golel\desktop\лаба множества\mp2-lab1-set\src\tset.cpp(81): warning C4715: TSet::operator==: значение возвращается не при всех путях выполнения
+c:\users\golel\desktop\лаба множества\mp2-lab1-set\src\tset.cpp(90): warning C4715: TSet::operator!=: значение возвращается не при всех путях выполнения
+  set.vcxproj -> C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\lib\Debug\set.lib

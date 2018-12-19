@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{85134399-94F4-372A-A54A-66EB70619F32}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\include;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\include;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\gtest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\bin\cmake.exe "-HC:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set" "-BC:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set" --check-stamp-file "C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeLists.txt;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\feature_tests.c;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\feature_tests.cxx;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeLists.txt;C:\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineSystem.cmake;C:\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\share\cmake-3.12\Modules\CMakeSystem.cmake.in;C:\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\bin\cmake.exe "-HC:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set" "-BC:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set" --check-stamp-file "C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/golel/Desktop/Лаба Множества/mp2-lab1-set/CMakeLists.txt;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeCCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeCXXCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeRCCompiler.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\3.12.2\CMakeSystem.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\feature_tests.c;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\feature_tests.cxx;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeLists.txt;C:\share\cmake-3.12\Modules\CMakeCCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeCCompilerABI.c;C:\share\cmake-3.12\Modules\CMakeCInformation.cmake;C:\share\cmake-3.12\Modules\CMakeCXXCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp;C:\share\cmake-3.12\Modules\CMakeCXXInformation.cmake;C:\share\cmake-3.12\Modules\CMakeCommonLanguageInclude.cmake;C:\share\cmake-3.12\Modules\CMakeCompilerIdDetection.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCXXCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompileFeatures.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompilerABI.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineCompilerId.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineRCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeDetermineSystem.cmake;C:\share\cmake-3.12\Modules\CMakeFindBinUtils.cmake;C:\share\cmake-3.12\Modules\CMakeGenericSystem.cmake;C:\share\cmake-3.12\Modules\CMakeInitializeConfigs.cmake;C:\share\cmake-3.12\Modules\CMakeLanguageInformation.cmake;C:\share\cmake-3.12\Modules\CMakeParseImplicitLinkInfo.cmake;C:\share\cmake-3.12\Modules\CMakeRCCompiler.cmake.in;C:\share\cmake-3.12\Modules\CMakeRCInformation.cmake;C:\share\cmake-3.12\Modules\CMakeSystem.cmake.in;C:\share\cmake-3.12\Modules\CMakeSystemSpecificInformation.cmake;C:\share\cmake-3.12\Modules\CMakeSystemSpecificInitialize.cmake;C:\share\cmake-3.12\Modules\CMakeTestCCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeTestCXXCompiler.cmake;C:\share\cmake-3.12\Modules\CMakeTestCompilerCommon.cmake;C:\share\cmake-3.12\Modules\CMakeTestRCCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\share\cmake-3.12\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-C.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-CXX.cmake;C:\share\cmake-3.12\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\TI-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\share\cmake-3.12\Modules\CompilerId\VS-10.vcxproj.in;C:\share\cmake-3.12\Modules\Internal\FeatureTesting.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-Determine-CXX.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC-C.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC-CXX.cmake;C:\share\cmake-3.12\Modules\Platform\Windows-MSVC.cmake;C:\share\cmake-3.12\Modules\Platform\Windows.cmake;C:\share\cmake-3.12\Modules\Platform\WindowsPaths.cmake;C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\ZERO_CHECK.vcxproj">
+      <Project>{FA5DA222-A6A6-3927-86B2-470AD83CCC8A}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\gtest\gtest.vcxproj">
+      <Project>{9955FEB8-BB11-3E76-AB04-40252CAB3F16}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\samples\sample_prime_numbers.vcxproj">
+      <Project>{2A244C26-2249-3D1B-879D-CBFACDC9F6FE}</Project>
+      <Name>sample_prime_numbers</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\src\set.vcxproj">
+      <Project>{28B3053A-CB8D-3B48-B826-61B4B3CFC1E4}</Project>
+      <Name>set</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\golel\Desktop\Лаба Множества\mp2-lab1-set\test\test_set.vcxproj">
+      <Project>{72B38457-2A0A-32AE-B31B-1B9F3CC11CA7}</Project>
+      <Name>test_set</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
