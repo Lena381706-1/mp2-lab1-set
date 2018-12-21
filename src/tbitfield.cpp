@@ -46,16 +46,24 @@ TBitField::~TBitField()
 
 int TBitField::GetMemIndex(const int n) const // индекс Мем для бита n 
 {
+<<<<<<< HEAD
+	return 0;
+=======
 	if (n < 0 || n >= BitLen)
 		throw "Uncorrect bit";
 	return (n / (8 * sizeof(TELEM)));
+>>>>>>> master
 }
 
 TELEM TBitField::GetMemMask(const int n) const // битовая маска для бита n 
 {
+<<<<<<< HEAD
+	return 0;
+=======
 	if (n < 0 || n >= BitLen)
 		throw "Uncorrect bit";
 	return (1 << (n - 1) % (8 * sizeof(TELEM)));
+>>>>>>> master
 }
 
 // доступ к битам битового поля 
@@ -90,6 +98,8 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание 
 {
+<<<<<<< HEAD
+=======
 	if (this != &bf)
 	{
 		delete[]pMem;
@@ -99,6 +109,7 @@ TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 		for (int i = 0; i < MemLen; i++)
 			pMem[i] = bf.pMem[i];
 	}
+>>>>>>> master
 	return *this;
 }
 
@@ -124,36 +135,50 @@ int TBitField::operator!=(const TBitField &bf) const // сравнение
 
 TBitField TBitField::operator|(const TBitField &bf) // операция "или" 
 {
+<<<<<<< HEAD
+	return TBitField(1);
+=======
 	TBitField tmp(max(BitLen, bf.BitLen));
 	for (int i = 0; i < MemLen; i++)
 		tmp.pMem[i] = pMem[i];
 	for (int i = 0; i < bf.MemLen; i++)
 		tmp.pMem[i] |= bf.pMem[i];
 	return tmp;
+>>>>>>> master
 }
 
 TBitField TBitField::operator&(const TBitField &bf) // операция "и" 
 {
+<<<<<<< HEAD
+	return 0;
+=======
 	TBitField tmp(max(BitLen, bf.BitLen));
 	for (int i = 0; i < min(MemLen, bf.MemLen); i++)
 		tmp.pMem[i] = pMem[i] & bf.pMem[i];
 	return tmp;
+>>>>>>> master
 }
 
 TBitField TBitField::operator~(void) // отрицание 
 {
+<<<<<<< HEAD
+	return TBitField(1);
+=======
 	TBitField tmp(BitLen);
 	for (int i = 0; i < BitLen; i++) {
 		if (this->GetBit(i) == 0)
 			tmp.SetBit(i);
 	}
 	return tmp;
+>>>>>>> master
 }
 
 // ввод/вывод 
 
 istream &operator>>(istream &istr, TBitField &bf) // ввод 
 {
+<<<<<<< HEAD
+=======
 	string temp;
 	istr >> temp;
 	if (temp.size() != bf.GetLength())
@@ -167,12 +192,16 @@ istream &operator>>(istream &istr, TBitField &bf) // ввод
 		else
 			throw "Uncorrect input";
 	}
+>>>>>>> master
 	return istr;
 }
 
 ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод 
 {
+<<<<<<< HEAD
+=======
 	for (int i = 0; i < bf.GetLength(); i++)
 		ostr << bf.GetBit(i);
+>>>>>>> master
 	return ostr;
 }
