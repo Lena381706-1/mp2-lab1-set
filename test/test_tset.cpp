@@ -285,23 +285,21 @@ TEST(TSet, check_negation_operator)
 {
   const int size = 4;
   TSet set(size), set1(size), expSet(size);
-  // set1 = {1, 3}
+  
   set.InsElem(1);
   set.InsElem(3);
   set1 = ~set;
-  // expSet = {0, 2}
+  
   expSet.InsElem(0);
   expSet.InsElem(2);
 
   EXPECT_EQ(expSet, set1);
 }
-/*
-
 
 TEST(TSet, nonequivalence_set_true_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
+	int size = 7;
+	TSet set1(size), set2(size);
 
 	set1.InsElem(6);
 	set1.InsElem(5);
@@ -318,8 +316,8 @@ TEST(TSet, nonequivalence_set_true_check)
 //---------------------------------------------------------------------------------
 TEST(TSet, nonequivalence_set_false_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
+	int size = 7;
+	TSet set1(size), set2(size);
 
 	set1.InsElem(6);
 	set1.InsElem(5);
@@ -336,8 +334,8 @@ TEST(TSet, nonequivalence_set_false_check)
 //---------------------------------------------------------------------------------
 TEST(TSet, eq_set_true_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
+	int size = 7;
+	TSet set1(size), set2(size);
 
 	set1.InsElem(6);
 	set1.InsElem(5);
@@ -354,8 +352,8 @@ TEST(TSet, eq_set_true_check)
 //---------------------------------------------------------------------------------
 TEST(TSet, eq_set_false_check)
 {
-	int dlina = 7;
-	TSet set1(dlina), set2(dlina);
+	int size = 7;
+	TSet set1(size), set2(size);
 
 	set1.InsElem(6);
 	set1.InsElem(3);
@@ -369,4 +367,3 @@ TEST(TSet, eq_set_false_check)
 
 	EXPECT_EQ(false, set1 == set2);
 }
-*/
