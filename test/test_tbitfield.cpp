@@ -316,7 +316,11 @@ TEST(TBitField, bitfields_with_different_bits_are_not_equal)
 }
 
 
+
+
 TEST(TBitField, two_plus_two_equals_four)
 {
 	EXPECT_EQ(4, 2 + 2);
 }
+
+
