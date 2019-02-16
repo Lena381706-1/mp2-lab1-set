@@ -1,4 +1,4 @@
-language: cpp
+gitlanguage: cpp
 compiler:
   - gcc
   - clang
