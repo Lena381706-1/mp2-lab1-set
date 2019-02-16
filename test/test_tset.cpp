@@ -296,74 +296,66 @@ TEST(TSet, check_negation_operator)
   EXPECT_EQ(expSet, set1);
 }
 
-TEST(TSet, nonequivalence_set_true_check)
+TEST(TSet, true_equivalence_set)
 {
-	int size = 7;
+	const int size = 5;
 	TSet set1(size), set2(size);
 
-	set1.InsElem(6);
-	set1.InsElem(5);
-	set1.InsElem(3);
+	set1.InsElem(1);
 	set1.InsElem(2);
-
-	set2.InsElem(6);
-	set2.InsElem(5);
-	set2.InsElem(4);
-	set1.InsElem(2);
-
-	EXPECT_EQ(true, set1 != set2);
-}
-
-/*TEST(TSet, nonequivalence_set_false_check)
-{
-	int size = 7;
-	TSet set1(size), set2(size);
-
-	set1.InsElem(6);
-	set1.InsElem(5);
-	set1.InsElem(3);
-	set1.InsElem(2);
-
-	set2.InsElem(6);
-	set2.InsElem(5);
-	set2.InsElem(4);
-	set1.InsElem(2);
-
-	EXPECT_EQ(false, set1 != set2);
-}
-
-TEST(TSet, eq_set_true_check)
-{
-	int size = 7;
-	TSet set1(size), set2(size);
-
-	set1.InsElem(6);
-	set1.InsElem(5);
 	set1.InsElem(4);
-	set1.InsElem(2);
 
-	set2.InsElem(6);
-	set2.InsElem(5);
+	set2.InsElem(1);
+	set2.InsElem(2);
 	set2.InsElem(4);
-	set1.InsElem(2);
 
-	EXPECT_EQ(true, set1 == set2);
+	EXPECT_EQ(set1 == set2, true);
 }
-*/
-TEST(TSet, eq_set_false_check)
+
+TEST(TSet, false_equivalence_set)
 {
-	int size = 7;
+	const int size = 5;
 	TSet set1(size), set2(size);
 
-	set1.InsElem(6);
-	set1.InsElem(3);
+	set1.InsElem(1);
+	set1.InsElem(2);
 	set1.InsElem(4);
-	set1.InsElem(2);
 
-	set2.InsElem(6);
-	set2.InsElem(5);
+	set2.InsElem(1);
+	set2.InsElem(2);
+	set2.InsElem(3);
+
+	EXPECT_EQ(set1 == set2, false);
+}
+
+TEST(TSet, true_anti_equivalence_set)
+{
+	const int size = 5;
+	TSet set1(size), set2(size);
+
+	set1.InsElem(1);
+	set1.InsElem(2);
+	set1.InsElem(4);
+
+	set2.InsElem(1);
+	set2.InsElem(2);
+	set2.InsElem(3);
+
+	EXPECT_EQ(set1 != set2, true);
+}
+
+TEST(TSet, false_anti_equivalence_set)
+{
+	const int size = 5;
+	TSet set1(size), set2(size);
+
+	set1.InsElem(1);
+	set1.InsElem(2);
+	set1.InsElem(4);
+
+	set2.InsElem(1);
+	set2.InsElem(2);
 	set2.InsElem(4);
-	set1.InsElem(2);
 
-	EXPECT_EQ(false, set1 == set2);
-} 
+	EXPECT_EQ(set1 != set2, false);
+}
