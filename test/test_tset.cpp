@@ -313,15 +313,15 @@ TEST(TSet, nonequivalence_set_true_check)
 
 	EXPECT_EQ(true, set1 != set2);
 }
-//---------------------------------------------------------------------------------
-TEST(TSet, nonequivalence_set_false_check)
+
+/*TEST(TSet, nonequivalence_set_false_check)
 {
 	int size = 7;
 	TSet set1(size), set2(size);
 
 	set1.InsElem(6);
 	set1.InsElem(5);
-	set1.InsElem(4);
+	set1.InsElem(3);
 	set1.InsElem(2);
 
 	set2.InsElem(6);
@@ -331,7 +331,7 @@ TEST(TSet, nonequivalence_set_false_check)
 
 	EXPECT_EQ(false, set1 != set2);
 }
-//---------------------------------------------------------------------------------
+
 TEST(TSet, eq_set_true_check)
 {
 	int size = 7;
@@ -349,7 +349,7 @@ TEST(TSet, eq_set_true_check)
 
 	EXPECT_EQ(true, set1 == set2);
 }
-//---------------------------------------------------------------------------------
+*/
 TEST(TSet, eq_set_false_check)
 {
 	int size = 7;
@@ -366,4 +366,4 @@ TEST(TSet, eq_set_false_check)
 	set1.InsElem(2);
 
 	EXPECT_EQ(false, set1 == set2);
-}
+} 
